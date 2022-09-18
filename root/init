@@ -1,0 +1,9 @@
+#!/bin/bash
+
+
+/etc/cont-init.d/00-envsubst.sh
+/etc/cont-init.d/00-smb.sh
+
+/etc/services.d/nmbd/run &
+/etc/services.d/avahi/run &
+/etc/services.d/sambd/run
