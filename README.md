@@ -6,10 +6,13 @@ Thank you Tim🍏, very cool.
 
 ## Show me
 
-[![Docker Pulls](https://img.shields.io/docker/pulls/msjpq/time-machine.svg)](https://hub.docker.com/r/msjpq/time-machine/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/drdrei/tmachine.svg)](https://hub.docker.com/r/drdrei/tmachine/)
 
 ```sh
-docker run --net=host -v /my_folder/:/share msjpq/time-machine
+
+# 
+docker run --hostname time_machine --ip 192.168.2.200 --net=homelan --expose 139 --expose 445 -v /backups/time_machine/:/share drdrei/tmachine
+
 ```
 
 - User: `dog`
@@ -35,7 +38,7 @@ version: "3.7"
 
 services:
   time_machine:
-    image: msjpq/time-machine
+    image: drdrei/tmachine
     container_name: time-machine
     restart: unless-stopped
     network_mode: host

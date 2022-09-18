@@ -6,7 +6,7 @@ set -o pipefail
 
 cd "$(dirname "$0")" || exit 1
 
-IMAGE='msjpq/time-machine'
+IMAGE='drdrei/tmachine'
 docker build -f 'Dockerfile' -t "$IMAGE" .
 
 
