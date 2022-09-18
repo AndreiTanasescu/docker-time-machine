@@ -6,7 +6,7 @@ set -o pipefail
 
 GROUP_NAME='time-machine-users'
 
-groupadd --non-unique --gid "$PGID" "$GROUP_NAME"
+groupadd --non-unique --gid "$PGID" "$GROUP_NAME" -f
 useradd --system --non-unique --gid "$GROUP_NAME" --uid "$PUID" "$SMB_USER"
 
 
